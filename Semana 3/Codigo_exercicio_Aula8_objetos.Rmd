@@ -29,7 +29,7 @@ who_bruto <- import("https://covid19.who.int/WHO-COVID-19-global-data.csv", na.s
 a) Crie um vetor chamado "meu_primeiro_vetor" com cinco valores numéricos usando a função c().
 
 ```{r , echo=F}
-meu_primeiro_vetor<-c()
+meu_primeiro_vetor<-c(5,4,3,2,1)
 
 ```
 
@@ -37,17 +37,36 @@ b) Crie crie outro vetor com outro nome de sua preferência.
 
 ```{r}
 
+meu_segundo_vetor <- c(1,2,3,4,5,6,7,8,9,10)
+
 ```
 
 c) Aplique a função sqrt() que calcula a raiz quadrada e salve o resultado em um nome objeto com o nome de sua preferência.
 
 ```{r}
 
+raiz_segundo_vetor <- sqrt(meu_segundo_vetor)
+
 ```
 
 d) Como posso observar esses objetos. Cite pelo menos duas formas diferentes.
 
 ```{r}
+
+# Observar as listas:
+
+#1
+raiz_segundo_vetor |> View()
+
+#2
+raiz_segundo_vetor |> print()
+
+#3
+str(raiz_segundo_vetor)
+
+#4
+raiz_segundo_vetor |> glimpse()
+
 ```
 
 # 2) Strings
@@ -55,18 +74,19 @@ d) Como posso observar esses objetos. Cite pelo menos duas formas diferentes.
 a) Corrija o comando abaixo para criar um vetor de caracteres com o nome dessas pessoas. 
 
 ```{r}
-nomes_colegas<-c(Otto,Carol, Julio)
+nomes_colegas <- c("Otto","Carol", "Julio")
 ```
 
 b) Corrija o comando abaixo para criar um vetor de caracteres com o nome dos colegas.
 
 ```{r}
-nomes_colegas<-("Otto","Carol", "Julio")
+nomes_colegas <- c("Otto","Carol", "Julio")
 ```
 
 c) Use a funçao class() para verificar os tipos de vetores criados ate agora
 
 ```{r}
+class(nomes_colegas)
 
 ```
 
@@ -76,12 +96,15 @@ d) Observe os tipos de objetos criados até agora na aba Environment. Descreva o
 e) Use a função sum()  para calcular a soma dos valores do vetor numérico criado anteriormente. Basta dar o nome do vetor numérico como argumento para essa função. Note que ela só aceita vetores numéricos, afinal, não é possível somar nomes. 
 
 ```{r}
-sum()
+sum(meu_primeiro_vetor)
+
 ```
 
 f) Descubra (pode ser  no google ou com o coleguinha) qual a função para calcular a média dos valores do mesmo vetor. É importante exercitar essa capacidade de busca, mesmo que não tenhamos visto ainda essa função em aula. 
 
 ```{r}
+
+mean(meu_primeiro_vetor)
 
 ```
 
@@ -92,11 +115,16 @@ a) Use a função class() para verificar o tipo de objeto que é o "who_bruto" c
 
 ```{r}
 
+class(who_bruto)
+
 ```
 
 d) Use a função dim() no mesmo objeto. Você consegue descobrir o que essa função faz?
+R: Essa função retorna a dimensão do objeto, ou seja, quantas linhas e colunas ele tem.
 
 ```{r}
+
+dim(who_bruto)
 
 ```
 
@@ -104,11 +132,19 @@ e)  Use o atributo do R base $ para salvar a coluna New_Cases do objeto who_brut
 
 ```{r}
 
+new_cases <- who_bruto$New_cases
+
+
+
 ```
 
 f) Veja um summary() desse vetor que acabou de criar
 
 ```{r}
+
+summary(new_cases)
+
+
 
 ```
 

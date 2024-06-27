@@ -12,7 +12,7 @@ rm(list=ls()) # limpa  o ambiente
 # PACOTES ----
 
 if (!require(pacman)) install.packages("pacman")
-  pacman::p_load(rio)
+  pacman::p_load(rio, tidyverse)
 ```
 
 # Importando
@@ -49,11 +49,15 @@ Agora vamos supor o contrário. Qua você deseja salvar a base de dados dentro d
 
 ```{r}
 
+dados <- import("Dados/vacinas.xlsx")
+
 ```
 
 ## 4) Escolha um arquivo de seu interesse e importe, salvando com o nome `meus_dados`. 
 
 ```{r}
+
+meus_dados <- import("https://www.ipe.df.gov.br/wp-content/uploads/2019/06/PDAD_2018-Moradores_33RAs.csv")
 
 ```
 
