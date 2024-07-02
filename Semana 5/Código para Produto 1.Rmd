@@ -1,6 +1,6 @@
 ---
-title: "Meu primeiro arquivo automático"
-author: "Meu nome"
+title: "Análise preliminar de casos de COVID-19 no mundo"
+author: "Rogerio Vidal de Siqueira"
 date: "`r format(Sys.Date(),'%d/%m/%Y')`"
 output:
   word_document: default
@@ -25,36 +25,46 @@ if(!dir.exists(pasta)) dir.create(pasta) #cria uma pasta para as saídas do dia
 # agora vou caggerar os pacotes que vamos usar usando uma função especial. Não se preocupe em entender isso agora. Apenas rode! Vai instalar os pacotes que não tiver instalados no seu computador. E carregar todos. 
 
 if (!require(pacman)) install.packages("pacman")
-  pacman::p_load(tidyverse, data.table, flextable, officer, knitr, rmarkdown)
+  pacman::p_load(tidyverse, data.table, flextable, 
+                 officer, knitr, rmarkdown, rio)
 ```
 
 ```{r bancos, echo=F, message=F, warning=F }
 # BANCOS ----
 
-who_bruto <- fread("https://covid19.who.int/WHO-COVID-19-global-data.csv", na.strings = "")
+who_bruto <- import("https://covid19.who.int/WHO-COVID-19-global-data.csv")
 ```
 
-## Aqui é o subtítulo que você quiser
+## Casos de COVID-19 no mundo
 
-Daí, aqui você escreve o que você achar interessante sobre os dados.
+Dados abertos sobre saúde são essenciais para aumentar a transparência e a responsabilidade no sistema de saúde, além de promover a pesquisa e a inovação. Com a pandemia de COVID-19, a disponibilidade de dados em tempo real se tornou ainda mais importante. Eles permitem que governos e organizações internacionais monitorem a propagação do vírus e avaliem a eficácia das medidas de controle.Além disso, engajam a população no monitoramento de políticas públicas e possibilitam a criação de novas tecnologias e serviços. Esses dados também são cruciais para identificar e reduzir desigualdades no acesso e na qualidade dos cuidados de saúde.
+
+Os dados realizados nesse relatório foram obtidos pelo _sítio_ da WHO e são atualizados semanalmente. Além de capturar novos casos e mortes notificados em um determinado dia, as atualizações são feitas retrospectivamente para corrigir as contagens dos dias anteriores, conforme necessário, com base nas informações subsequentes recebidas.
 
 ## Número de casos acumulados
 
+Para realizar a análise proposta no relatório, foi necessário realizar algumas manipulações no banco de dados. A primeira etapa foi selecionar as colunas que seriam utilizadas, que são: `Date_reported`, `Country`, `New_cases` e `Cumulative_cases`. Em seguida, os dados foram agrupados por país e foi calculado o número de casos acumulados. Por fim, foi feito um filtro para selecionar apenas os países que possuem mais de 10 milhões de casos acumulados.
+
 ```{r manipulacoes, include=TRUE}
-# MANIPULAÇÕES NO BANCO ----
+# MANIPULAÇÕES NO BANCO DA WHO
 who_trat<-who_bruto %>% 
-  select(Date_reported,Country,New_cases,Cumulative_cases) %>% #colunas q quero
+  select(Date_reported,Country,New_cases,Cumulative_cases) %>% #colunas que quero
   group_by(Country) %>% # agrupando  (tabela dinamica)
   summarise(Acumulado=max(Cumulative_cases, na.rm=T)) %>% # agrupando  (tabela dinamica)
   filter (Acumulado > 10000000) # filtrando os que tem mais de 10 milhões
 
-# MEU PRIMEIRO COMENTÁRIO ----
 
-# VALORES PARA O TEXTO ----
-
-# VALOR PARA BRA
+# VALOR PARA BRASIL
 Valor_BRA<-(who_trat %>% 
   filter(Country=="Brazil"))$Acumulado
+
+# VALOR PARA USA
+Valor_USA <- (who_trat %>% 
+  filter(Country=="United States of America"))$Acumulado
+
+# VALOR PARA CHINA
+Valor_CH <- (who_trat %>% 
+  filter(Country=="China"))$Acumulado
   
 ```
 
@@ -63,23 +73,38 @@ Valor_BRA<-(who_trat %>%
 head(who_trat) 
 ```
 
-Ao analisar os dados de *casos acumulados* por local de ocorrência, observa - se que o **Brasil** registrou até o momento `r Valor_BRA`.
+A pandemia de COVID-19 afetou mais de 200 países e territórios no mundo, de acordo com os dados da OMS (Organização Mundial da Saúde). Ao analisar os dados de *casos acumulados* por local de ocorrência, observa - se que o **Brasil** registrou até o momento `r Valor_BRA`. A *China* registrou um total de `r Valor_CH` casos acumulados. Apesar de ter a segunda maior população do mundo, estimada em 1,412 bilhões de pessoas, os **Estados Unidos** foi país que registrou o mair número de casos acumulados, totalizando `r Valor_USA`. Esse número é reflexo de uma série de falhas no combate à pandemia, como a falta de testes, a demora na adoção de medidas de isolamento social e a politização do uso de máscaras.
 
-## Um gráfico aqui
+
+## Gráfico com os 7 países com mais casos acumulados
 
 ```{r figura1,  include=F}
+
+
+# filtar os 7 paises com mais casos de covid
+who_trat_top7 <- who_trat %>% 
+  arrange(desc(Acumulado)) %>% 
+  head(7)
+
+
 # Gerando a figura 1 ----
-ggplot(who_trat)+
-  geom_bar(aes(x=Country, y=Acumulado), stat="identity", color="blue", fill="pink")+
+ggplot(who_trat_top7)+
+  geom_bar(aes( x=reorder(Country, -Acumulado), y=Acumulado), stat="identity", color="white", fill="grey")+
   coord_flip()+
-  theme_classic()
+  theme_classic() + 
+  labs(title = "",
+       x = "Países",
+       y = "Casos acumulados") +
+  scale_y_continuous(
+  labels = scales::comma_format(big.mark = '.',
+                                 decimal.mark = ','))
 
 # Dados da figura 1 ----
 img1_path<-paste0(pasta, "/Graf1_Casos_acumulados_7paises.png")
 
 ggsave(filename =img1_path, width=6, height=3 )
 
-legenda1<- "Minha legenda da figura"
+legenda1<- "Casos acumulados de COVID-19 em 7 países"
 ```
 
 ```{r echo=F, fig.cap=legenda1}
@@ -87,13 +112,18 @@ img1_path<-img1_path
 knitr::include_graphics(img1_path)
 ```
 
-## E pra finalizar uma tabelinha aqui
+
+
+## Tabela com os paises com mais de 10 milhões de casos acumulados
+
 
 ```{r tabela1, echo=F, include=F}
 
 # Gerando e editando a tabela ----
 (Tab1<-who_trat %>% 
   flextable() %>% 
+  set_header_labels(
+    Acumulado = "Casos acumulados", Country = "País") %>%
   width(width=2) %>% 
   style(pr_t=fp_text(font.size=13,
                      font.family='Calibri'), part="body")%>%
@@ -103,12 +133,16 @@ knitr::include_graphics(img1_path)
   bold(part="body", j=1)%>%
   hline( border=fp_border(color="black", width = 0.5))%>%
   align( align = "center", part = "all")%>%
-  bg(bg="orange", part="header") )
+  bg(bg="#C4EEF2", part="header") %>%
+   colformat_double(big.mark = ".")
+ 
+ 
+ )
  
 # salvando e dados da tabela ----
 
 
-titulo1<-"Titulo Tabela 1"
+titulo1<-"Países com mais de 10 milhões de casos acumulados de COVID-19"
 
 tab1_path<-paste0(pasta,"/Tab1_Casos_acumulados_7paises.docx")
 
