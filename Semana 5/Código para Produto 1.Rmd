@@ -120,24 +120,22 @@ knitr::include_graphics(img1_path)
 ```{r tabela1, echo=F, include=F}
 
 # Gerando e editando a tabela ----
-(Tab1<-who_trat %>% 
+(
+  Tab1<-who_trat %>% 
   flextable() %>% 
-  set_header_labels(
-    Acumulado = "Casos acumulados", Country = "País") %>%
-  width(width=2) %>% 
+  set_header_labels( Acumulado = "Casos acumulados", Country = "País") %>% # renomeando as colunas
+  width(width=2) %>%  # largura da tabela
   style(pr_t=fp_text(font.size=13,
-                     font.family='Calibri'), part="body")%>%
+                     font.family='Calibri'), part="body")%>% # estilo do corpo texto
   style(pr_t=fp_text(font.size=13,
-                     font.family='Calibri'), part="header")%>%
-  bold(part="header")%>%
-  bold(part="body", j=1)%>%
-  hline( border=fp_border(color="black", width = 0.5))%>%
-  align( align = "center", part = "all")%>%
-  bg(bg="#C4EEF2", part="header") %>%
-   colformat_double(big.mark = ".")
- 
- 
- )
+                     font.family='Calibri'), part="header")%>% # estilo do cabeçalho
+  bold(part="header")%>% # cabeçalho em negrito
+  bold(part="body", j=1)%>% # corpo em negrito
+  hline( border=fp_border(color="black", width = 0.5))%>% # linha horizontal
+  align( align = "center", part = "all")%>% # alinhamento
+  bg(bg="#C4EEF2", part="header") %>% # cor de fundo do cabeçalho
+   colformat_num(big.mark = ".") # formatação dos números
+)
  
 # salvando e dados da tabela ----
 
