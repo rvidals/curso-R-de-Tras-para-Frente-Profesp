@@ -54,7 +54,7 @@ who_semana <-who_trat %>%
 
 who_acumulado %>% 
   ggplot(aes(x=Country, y=Acumulado)) + #repare comecei a usar o "+", não o "%>%"
-  geom_col(color="blue", fill="pink") +#parametros estáticos
+  geom_col(color="grey", fill="pink") +#parametros estáticos
   coord_flip()+
   theme_classic()
 ```
