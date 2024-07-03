@@ -1,5 +1,5 @@
 ---
-title: "Análise preliminar de casos de COVID-19 no mundo"
+title: "Análise preliminar em R de casos de COVID-19 no mundo"
 author: "Rogerio Vidal de Siqueira"
 date: "`r format(Sys.Date(),'%d/%m/%Y')`"
 output:
