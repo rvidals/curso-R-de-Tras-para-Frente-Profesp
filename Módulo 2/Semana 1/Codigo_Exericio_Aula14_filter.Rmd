@@ -48,21 +48,28 @@ painel_trat <-  painel_bruto %>%
   filter(!is.na(codmun))
 ```
 
-b) O que casa um dos filtros abaixo está selecionando?
+b) O que cada um dos filtros abaixo está selecionando?
 
 ```{r}
+
+# Casos do DF
 painel_df <- painel_trat %>% 
   filter(estado=="DF")
 
+
+# Casos que não são do DF
 painel_nao_DF <- painel_trat %>% 
   filter(estado!="DF")
 
+# Casos da Semana Epidemiológica 1
 painel_semana1 <- painel_trat %>% 
   filter(semanaEpi==1)
 
+# Casos que não sejam da Semana Epidemiológica 1
 painel_semana_menos1 <- painel_trat %>% 
   filter(semanaEpi!=1)
 
+# Casos da Semana Epidemiológica 5 e adiante
 painel_semana5_10 <- painel_trat %>% 
   filter(semanaEpi>=5)
 
@@ -78,6 +85,8 @@ sort(unique(painel_trat$estado))
 
 ```{r}
 
+casos_df <- painel_bruto %>% # Dado bruto
+  filter(estado == 'DF') 
 
   
 ```
@@ -88,6 +97,9 @@ Tente fazer de maneiras diferentes: 1) salvando objetos intermediarios (filtre p
 
 ```{r}
 
+filtroDuplo <- painel_bruto %>% 
+  filter(estado == 'DF' & casosNovos > 1000)
+
 ```
 
 
@@ -96,6 +108,8 @@ Tente fazer de maneiras diferentes: 1) salvando objetos intermediarios (filtre p
 ```{r}
 
 # filtros triplos
+filtroTriplo <- painel_bruto %>% 
+  filter(estado == 'DF' & casosNovos > 300 & obitosNovos > 0)
 
 ```
 
@@ -103,7 +117,8 @@ Tente fazer de maneiras diferentes: 1) salvando objetos intermediarios (filtre p
 5) Faça um filtro para conter apenas os estados da região sul (ou seja, pode ser do RS ou de SC ou de PR)
 
 ```{r}
-
+painel_sul <- painel_trat %>%
+  filter(estado == 'RS' | estado == 'SC' | estado == 'PR')
 
 
   
