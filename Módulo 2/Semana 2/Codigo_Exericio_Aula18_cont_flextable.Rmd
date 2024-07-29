@@ -1,0 +1,91 @@
+---
+title: "Exercicio aula 18 - Tabelas2"
+author: "Carolina Musso"
+date: "2023-03-15"
+output:
+  word_document
+---
+
+```{r sets, include=F}
+rm(list=ls()) # limpa  o ambiente
+
+# PACOTES ----
+
+if (!require(pacman)) install.packages("pacman")
+  pacman::p_load(tidyverse, rio, flextable, officer,  scales)
+
+
+# Bancos e manipulações----
+
+dados_covid <- import("https://covid19.who.int/WHO-COVID-19-global-data.csv")
+
+```
+
+# Continuando as manipulações e edições feitas na aula 15 (introdução ao flextable), faça como se pede. 
+
+
+```{r}
+obitos_Alemanha_Franca <- dados_covid %>% 
+  select(Country, New_deaths, Cumulative_deaths) %>% 
+  filter(Country=="Germany"|Country=="France")
+```
+
+## 1)
+
+Abaixo, foram feitas novas manipulações nos dados,. Explique o que cada linha está fazendo. 
+
+```{r}
+obitos_Alemanha_Franca_resumo <- obitos_Alemanha_Franca %>% 
+  group_by(Country) %>% 
+  summarise(media_obitos_diarios = mean(New_deaths),
+            maximo_obitos_acumulados = max(Cumulative_deaths)) %>% 
+  mutate_if(is.numeric, ~format(., big.mar=".", decimal.mark=",", digits=4)) # o parametro digits se refere aos valores com decimais
+  
+
+obitos_Alemanha_Franca_resumo
+```
+
+## 2) 
+
+Na tabela abaixo, explique o que cada linha de formatação está fazendo
+
+
+```{r}
+tab1 <- flextable (obitos_Alemanha_Franca_resumo) %>% 
+  autofit() %>%  # essa é uma função nova %>% 
+  align(align="left", j=1, part="all") %>% 
+  align(align="right", j=c(2,3), part="all") %>% 
+  bold(j=1, part="all") %>% 
+  bold(part="header")
+
+tab1
+  
+```
+
+## 3) 
+
+Note que no passo acima, salvei a tabela editada em um objeto chamado tab1. Agora posso continuar a edição usando esse objeto, ou seja, sem ter que escrever tudo novamente. O que mudou nessa tabela? 
+Agora, acrescente o parâmetro necessário dentro da função bg() já escrita abaixo de modo que a coloraçõa se extenda também para o cabeçalho (ou seja, não fique somente no corpo da tabela, mas em toda a coluna).
+
+```{r}
+tab2 <- tab1 %>% 
+  bg(bg="lightgrey", j=1)
+
+tab2
+```
+
+## 4) 
+
+Acrescente uma linha vertical pontilhada ("dotted"), separando a coluna do nome dos países das demais. O Estilo da linha já foi criado para vocês. Sugestão: use a função vline().
+
+```{r}
+
+estilo <- fp_border(color="darkgrey", width = 0.8, style = "dotted")
+
+tab2 %>% 
+  vline(j=1, border = estilo)
+
+```
+
+
+
