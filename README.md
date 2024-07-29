@@ -201,18 +201,52 @@ R4DS, 5. Data transformation (https://r4ds.had.co.nz/transform.html)
 
 [EpiHandbook, 29. Tables for presentation](https://epirhandbook.com/en/new_pages/tables_presentation.html#basic-flextable)
 
-[flextable book](https://ardata-fr.github.io/flextable-book/
+[flextable book](https://ardata-fr.github.io/flextable-book/)
 
-[flextable overview](https://ardata-fr.github.io/flextable-book/
+[flextable overview](https://ardata-fr.github.io/flextable-book/)
 
 [flextable gallery](https://ardata.fr/en/flextable-gallery/)
 
-[flextable RDocumentation](https://www.rdocumentation.org/packages/flextable/versions/0.7.0
+[flextable RDocumentation](https://www.rdocumentation.org/packages/flextable/versions/0.7.0)
 
 ### Semana 3
 #### Aula 19
+[Slide Aula 19 - Profa. Carolina Musso](https://cmusso86.github.io/R_tras_pra_Frente/Aula19_join/#/title-slide)
+
+[EpiHandbook, 14. Joining Data](https://epirhandbook.com/en/new_pages/joining_matching.html)
+
+[DataCamp, Joining data with dplyR](https://app.datacamp.com/learn/courses/joining-data-with-dplyr)
+
+[R4DS, 13. Relational data](https://r4ds.had.co.nz/relational-data.html)
+
 #### Aula 20
+[Slide Aula 20 - Profa. Carolina Musso](https://cmusso86.github.io/R_tras_pra_Frente/Aula20_string/)
+
+[EpiR-Handbook, 10. Characteres e Strings](https://epirhandbook.com/en/new_pages/characters_strings.html)
+
+[Curso - R, 7.4 O pacote stringr](https://livro.curso-r.com/7-4-o-pacote-stringr.html)
+
+[R4DS, 14. Strings](https://r4ds.had.co.nz/strings.html)
+
+[Documentação stringR](https://stringr.tidyverse.org/)
+
+[Introdução à Análise Textual aplicada à Sociologia](https://soaresalisson.github.io/analisetextual/)
+
+[DataCamp, Intermediate Regular Expressions in R](https://app.datacamp.com/learn/courses/intermediate-regular-expressions-in-r)
+
+[DataCamp, String Manipulation with stringR in R](https://app.datacamp.com/learn/courses/string-manipulation-with-stringr-in-r)
+
 #### Aula 21
+[Slide Aula 21 - Profa. Carolina Musso](https://cmusso86.github.io/R_tras_pra_Frente/Aula21_cont2_flextable/#/title-slide)
+[EpiR-Handbook, 29. Tables for presentation](https://epirhandbook.com/en/new_pages/tables_presentation.html)
+
+[flextable book](https://ardata-fr.github.io/flextable-book/)
+
+[flextable overview](https://ardata-fr.github.io/flextable-book/)
+
+[flextable gallery](https://ardata.fr/en/flextable-gallery/)
+
+[flextable RDocumentation](https://www.rdocumentation.org/packages/flextable/versions/0.7.0)
 
 ### Semana 4
 ### Semana 5
