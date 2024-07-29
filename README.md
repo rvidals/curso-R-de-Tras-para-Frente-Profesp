@@ -146,18 +146,18 @@ Tendo em vista um melhor aproveitamento dos meus estudos em R com o curso *R de 
 
 [DataCamp, Introduction to the Tidyverse](https://app.datacamp.com/learn/courses/introduction-to-the-tidyverse)
 
-[R4DS, 5. Data transformation] (https://r4ds.had.co.nz/transform.html)
+[R4DS, 5. Data transformation](https://r4ds.had.co.nz/transform.html)
 
 #### Aula 14
 [Slide Aula 14 - Profa. Carolina Musso](https://cmusso86.github.io/R_tras_pra_Frente/Aula14_filter/#/title-slide)
 
-EpiHandbook, 8.Cleaning data and core functions (https://epirhandbook.com/en/new_pages/cleaning.html)
+[EpiHandbook, 8.Cleaning data and core functions](https://epirhandbook.com/en/new_pages/cleaning.html)
 
-Curso-R, 7. Manipulação (https://livro.curso-r.com/7-manipulacao.html)
+[Curso-R, 7. Manipulação](https://livro.curso-r.com/7-manipulacao.html)
 
-DataCamp, Introduction to the Tidyverse (https://app.datacamp.com/learn/courses/introduction-to-the-tidyverse)
+[DataCamp, Introduction to the Tidyverse](https://app.datacamp.com/learn/courses/introduction-to-the-tidyverse)
 
-R4DS, 5. Data transformation (https://r4ds.had.co.nz/transform.html)
+[R4DS, 5. Data transformation](https://r4ds.had.co.nz/transform.html)
 
 #### Aula 15 
 [Slide Aula 15 - Profa. Carolina Musso](https://cmusso86.github.io/R_tras_pra_Frente/Aula15_intro_flextable/#/title-slide)
