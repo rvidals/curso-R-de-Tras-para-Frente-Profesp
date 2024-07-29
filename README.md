@@ -1,6 +1,6 @@
 # Curso de R de Trás para Frante
 
-Tendo em vista um melhor aproveitamento dos meus estudos em R com o curso *R de Trás para Frente*, criei esse repositório para salvar os meus exercícios resolvidos e os materias de apoio apresentados no curso.
+Tendo em vista um melhor aproveitamento dos meus estudos em R com o curso *R de Trás para Frente*, criei esse repositório para salvar os meus exercícios e os materias de apoio apresentados no curso.
 
 # Referências bibliográficas 
 ## Módulo 1
@@ -64,15 +64,76 @@ Tendo em vista um melhor aproveitamento dos meus estudos em R com o curso *R de 
 
 ### Semana 3
 #### Aula 7
+[Slide Aula 7 - Profa. Carolina Musso](https://cmusso86.github.io/R_tras_pra_Frente/Aula7_importacoes/#/title-slide)
+
+[EpiR Handbook](https://epirhandbook.com/en/import-and-export.html)
+
+[Curso-R, 5. Importação](https://livro.curso-r.com/)
+
+[DataCamp, Introdução a importação de dados em R](https://app.datacamp.com/learn/course...)
+
+[R4DS, 11. Data import](https://r4ds.had.co.nz/data-import.html)
+
+[EpiR-Handbook](https://epirhandbook.com/en/r-project...)
+
+[Curso-R](https://livro.curso-r.com/2-3-projetos.html)
+
 #### Aula 8
+[Slide Aula 8 - Profa. Carolina Musso](https://cmusso86.github.io/R_tras_pra_Frente/Aula8_objetos/)
+
+[EpiR-Handbook](https://epirhandbook.com/en/r-basics.html)
+
+[Curso-R](https://livro.curso-r.com/2-rstudio.html)
+
+[Hands-On Programming with R](https://rstudio-education.github.io/hopr/basics.html/)
+
+[R for Data Science (2e)](https://r4ds.hadley.nz/)
+
+[RStudio Education](https://education.rstudio.com/)
+
 #### Aula 9
+[Slide Aula 9 - Profa. Carolina Musso](https://cmusso86.github.io/R_tras_pra_Frente/Aula9_exportacao/)
+
+[EpiHandbook, 7.Import/Export](https://epirhandbook.com/en/new_pages/importing.html)
+
+[Curso-R, 5. Importação](https://livro.curso-r.com/5-importacao.html)
+
+[R4DS, 11. Data import](https://r4ds.had.co.nz/data-import.html)
 
 ### Semana 4
+
 #### Aula 10
+[Slide Aula 10 - Profa. Carolina Musso](https://cmusso86.github.io/R_tras_pra_Frente/Aula10_correcao_exercicios/)
+
 #### Aula 11
+[Slide Aula 11 - Profa. Carolina Musso](https://cmusso86.github.io/R_tras_pra_Frente/Aula11_introducao_a_graficos/)
+
+[EpiHandbook, Cap.30](https://epirhandbook.com/en/new_pages/ggplot_basics.html)
+
+[Curso-R, Livro, cap. 13.8](https://livro.curso-r.com/13-8-o-pacote-ggplot2-1.html) 
+
+[Curso Visualização](https://curso-r.github.io/202207-visualizacao/)
+
+[DataCamp, Introdução a visualização com ggplot](https://www.datacamp.com/users/sign_in?redirect=http%3A%2F%2Fapp.datacamp.com%2Flearn%2Fcourses%2Fintroduction-to-data-visualization-with-ggplot2&dc_referrer=https%3A%2F%2Fwww.youtube.com%2F)
+
+[R4DS O livro começa com gráficos!](https://r4ds.had.co.nz/)
+
+[GGPLOT](https://ggplot2-book.org/mastery.html)
 #### Aula 12
+[Slide Aula 12 - Profa. Carolina Musso](https://cmusso86.github.io/R_tras_pra_Frente/Aula12_fim_modulo_tarefa/#/title-slide)
+
+[EpiRHandbook, Cap.40, Relatórios em R Markdown](https://epirhandbook.com/en/new_pages/rmarkdown.html)
+
+[Curso Relatórios Automatizados](https://livro.curso-r.com/9-relatorios.html))
+
+[DataCamp, O que é Rmarkdown](https://campus.datacamp.com/courses/communicating-with-data-in-the-tidyverse/introduction-to-rmarkdown?ex=1)
+
+[RMarkdown: Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+
+[RMarkdown CookBook](https://bookdown.org/yihui/rmarkdown-cookbook/)
 
 ### Semana 5
+- [x] *Entrega do Produto 1*
 
 ## Módulo 2
 ### Semana 1
