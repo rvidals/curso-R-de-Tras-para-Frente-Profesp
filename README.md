@@ -137,8 +137,83 @@ Tendo em vista um melhor aproveitamento dos meus estudos em R com o curso *R de 
 
 ## Módulo 2
 ### Semana 1
+#### Aula 13
+[Slide Aula 13 - Profa. Carolina Musso](https://cmusso86.github.io/R_tras_pra_Frente/Aula13_select/#/title-slide)
+
+[EpiHandbook, 8.Cleaning data and core functions](https://epirhandbook.com/en/new_pages/cleaning.html)
+
+[Curso-R, 7. Manipulação](https://livro.curso-r.com/7-manipulacao.html)
+
+[DataCamp, Introduction to the Tidyverse](https://app.datacamp.com/learn/courses/introduction-to-the-tidyverse)
+
+[R4DS, 5. Data transformation] (https://r4ds.had.co.nz/transform.html)
+
+#### Aula 14
+[Slide Aula 14 - Profa. Carolina Musso](https://cmusso86.github.io/R_tras_pra_Frente/Aula14_filter/#/title-slide)
+
+EpiHandbook, 8.Cleaning data and core functions (https://epirhandbook.com/en/new_pages/cleaning.html)
+
+Curso-R, 7. Manipulação (https://livro.curso-r.com/7-manipulacao.html)
+
+DataCamp, Introduction to the Tidyverse (https://app.datacamp.com/learn/courses/introduction-to-the-tidyverse)
+
+R4DS, 5. Data transformation (https://r4ds.had.co.nz/transform.html)
+
+#### Aula 15 
+[Slide Aula 15 - Profa. Carolina Musso](https://cmusso86.github.io/R_tras_pra_Frente/Aula15_intro_flextable/#/title-slide)
+
+[EpiHandbook, 29. Tables for presentation](https://epirhandbook.com/en/new_pages/tables_presentation.html#basic-flextable)
+
+[flextable book](https://ardata-fr.github.io/flextable-book/)
+
+[flextable overview](https://mran.revolutionanalytics.com/snapshot/2019-02-07/web/packages/flextable/vignettes/overview.html)
+
+[flextable gallery](https://ardata.fr/en/flextable-gallery/)
+
+[flextable RDocumentation](https://www.rdocumentation.org/packages/flextable/versions/0.7.0)
+
+
 ### Semana 2
+#### Aula 16
+[Slide Aula 16 - Profa. Carolina Musso](https://cmusso86.github.io/R_tras_pra_Frente/Aula16_mutate/#/title-slide)
+
+[EpiHandbook, 8.Cleaning data and core functions](https://epirhandbook.com/en/new_pages/cleaning.html)
+
+[Curso-R, 7. Manipulação](https://livro.curso-r.com/7-manipulacao.html)
+
+[DataCamp, Introduction to the Tidyverse](https://app.datacamp.com/learn/courses/introduction-to-the-tidyverse)
+
+[R4DS, 5. Data transformation](https://r4ds.had.co.nz/transform.html)
+
+#### Aula 17
+[Slide Aula 17 - Profa. Carolina Musso](https://cmusso86.github.io/R_tras_pra_Frente/Aula17_group_by/#/title-slide)
+
+[EpiHandbook, 8.Cleaning data and core functions](https://epirhandbook.com/en/new_pages/cleaning.html)
+
+[Curso-R, 7. Manipulação](https://livro.curso-r.com/7-manipulacao.html)
+
+[DataCamp, Introduction to the Tidyverse](https://app.datacamp.com/learn/courses/introduction-to-the-tidyverse)
+
+[R4DS, 5. Data transformation](https://r4ds.had.co.nz/transform.html)
+
+#### Aula 18
+[Slide Aula 18 - Profa. Carolina Musso](https://cmusso86.github.io/R_tras_pra_Frente/Aula18_cont_flextable/#/title-slide)
+
+[EpiHandbook, 29. Tables for presentation](https://epirhandbook.com/en/new_pages/tables_presentation.html#basic-flextable)
+
+[flextable book](https://ardata-fr.github.io/flextable-book/
+
+[flextable overview](https://ardata-fr.github.io/flextable-book/
+
+[flextable gallery](https://ardata.fr/en/flextable-gallery/)
+
+[flextable RDocumentation](https://www.rdocumentation.org/packages/flextable/versions/0.7.0
+
 ### Semana 3
+#### Aula 19
+#### Aula 20
+#### Aula 21
+
 ### Semana 4
 ### Semana 5
 
